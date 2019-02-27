@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Amazing Plants</title>
+    <!-- Setting the favicon -->
+    <link rel="shortcut icon" href="images/icon.png">
+    <link rel="stylesheet" type="text/css" href="htmltaskcss.css" media="all" title="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Carter+One|Noto+Sans+SC" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <!-- htmltask.js contains the spam function -->
+    <script src="htmltask.js"></script>
+    
+    <!-- JQUERY EXAMPLE --->
+    <script>
+		</script>
+</head>
+
+<body class="grad2" align="center">
+    <div style="">
+        <div>
+            <h1 style="font-size:75px"><b id="header">Amazing Plants</b> &#127799;</h1>
+            <h3><i>“The earth laughs in flowers.”</i> ― Ralph Waldo Emerson</h3>
+        </div>
+        <!--------------------------------------------------------------------------------------------------->
+        <div class="tab" style="margin-left:10px" align="center">
+            <button id="Cactus" class="tablinks" onclick="openTab(event, 'CactusPlants')">Cactus Plants &#127797;</button>
+            <button class="tablinks" onclick="openTab(event, 'CarnivorousPlants')">Carnivorous Plants &#128523;</button>
+            <button class="tablinks" onclick="openTab(event, 'SensitivePlants')">Sensitive Plants &#128070;</button>
+        </div>
+        <!-------------------------------------------	 CONTENT DIVS   --------------------------------------->
+        <div id="CactusPlants" class="tabcontent">
+            <h2>Cactus</h2>
+            <p>Cacti can survive from 15 to 300 years, depending on the species.</p>
+            <table>
+            	<tr>
+            		<img id="imgcac" src="images/blank.jpg" data-alt-src="images/cactus.png">
+            	</tr>
+            	<tr>
+            		<iframe src="https://www.youtube.com/embed/I8W4LyIXINE" allowfullscreen height="450px" width="50%"></iframe>
+            	</tr>
+            </table>
+        </div>
+        <!--------------------------------------------------------------------------------------------------->
+        <div id="CarnivorousPlants" class="tabcontent" height="500px">
+            <h2>Carnivorous Plants</h2>
+            <p>Carnivorous plant, sometimes called insectivorous plant, any plant especially adapted for capturing and digesting 
+            insects and other animals by means of ingenious pitfalls and traps. Carnivory in plants has evolved independently about 
+            six times across several families and orders. The more than 600 known species of carnivorous plants constitute a very 
+            diverse group, in some cases having little more in common than their carnivorous habit.</p>
+            <iframe src="https://www.youtube.com/embed/mC4earMBHIo" allowfullscreen height="500px" width="50%"></iframe>
+        </div>
+        <!------------------------------------------------------------------------------------------------ -->
+        <div id="SensitivePlants" class="tabcontent">
+            <h2>Sensitive Plants</h2>
+            <p>Sensitive plant, (Mimosa pudica), also called humble plant, plant in the pea family (Fabaceae) that responds to touch 
+            and other stimulation by rapidly closing its leaves and drooping. Native to South and Central America, the plant is a 
+            widespread weed in tropical regions and has naturalized elsewhere in warm areas. It is commonly grown as a 
+            curiosity in greenhouses.</p>
+            <iframe src="https://www.youtube.com/embed/U5Qcex6HvJk" allowfullscreen height="500px" width="50%"></iframe>
+            <br>
+            <img src="images/mim.jpg" height="50%" width="50%">
+        </div>
+        <hr style="font-weight:bold;colour:black;">
+        <p>Do you want to play a game?</p>
+        <button id="togBtn" class="game" onclick="btnToggle('test')">Yes!</button>
+        <div id="test" style="background-color:lawngreen; padding:20px; display:none">
+            <b>Could you be a winner?</b>
+            <p>Click on the moving circle to win a prize!</p>
+            <div style="width:100px;height:100px;margin-bottom:10px;">
+                <div id="colourChangingCircle" onclick="randomPrize(); toggle('downloadCac')"></div>
+            </div>
+            <a id="downloadCac" style="display:none; font-size:40px;" download></a>
+        </div>
+    </div>
+    </div>
+</body>
+<script type="text/javascript" defer>
+    				// Get the element with id="Cactus" and click on it to make it show onload
+            document.getElementById("Cactus").click();
+
+            function openTab(evt, plantType) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(plantType).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+</script>
+
+</html>
